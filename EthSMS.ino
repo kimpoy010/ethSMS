@@ -61,9 +61,13 @@ void loop() {
               int respLen = str.length() + 1;
               char charArr[respLen];
               str.toCharArray(charArr, respLen);
-              Serial.print(str);
-              //PHONE_NUMBER = str;
-              GSMTEST.sendSMS(str,MESSAGE); //DEFINE PHONE NUMBER AND TEXT
+             
+              Serial.print(charArr);
+              if(GSMTEST.sendSMS(charArr,MESSAGE)){
+                     Serial.print("Message SENT!");
+              }else{
+                Serial.print("Message NOT SENT!");
+              }
            }
             delay(5000); 
             client.stop();
