@@ -8,7 +8,7 @@
 #define PIN_TX    3
 #define PIN_RX    2
 #define BAUDRATE  9600
-#define PHONE_NUMBER "+639056600153"
+#define PHONE_NUMBER "+639056600152"
 #define MESSAGE  "Smoke was detected in your apartment unit"
 
 String response = String(100); 
